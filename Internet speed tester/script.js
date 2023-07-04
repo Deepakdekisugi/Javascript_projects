@@ -3,14 +3,14 @@ let imageSize = "";
 let image = new Image();
 let bitSpeed = document.getElementById("bits"),
     kbSpeed = document.getElementById("kbs"),
-    mbspeed = document.getElementById("mbs"),
+    mbSpeed = document.getElementById("mbs"),
     info = document.getElementById("info");
 
 let totalBitSpeed = 0;
 let totalKbSpeed = 0;
-let totalMsSpeed = 0;
-let numTests = 0;
-let TestCompleted = 0;
+let totalMbSpeed = 0;
+let numTests = 5;
+let testCompleted = 0;
 
 // Get random image from unsplash .com
 
@@ -28,3 +28,53 @@ image.onload = async function() {
     });
 };
 
+// Function to calculate speed
+function calculateSpeed(){
+    //Time taken in second
+    let timeDuration = (endTime - startTime) / 1000;
+    // total bits
+    let loadedBits = imageSize * 8;
+    let speedInBts = loadedBits / timeDuration;
+    let speedInKbs = speedInBts / 1024;
+    let speedInMbs = speedInKbs / 1024;
+
+
+    totalBitSpeed += speedInBts;
+    totalKbSpeed += speedInKbs;
+    totalMbSpeed += speedInMbs;
+
+    testCompleted++;
+
+    //if all test is completed (we get 5 image then calculate average)
+
+    if (testCompleted === numTests) {
+        let averageSpeedInBps =(totalBitSpeed / numTests).toFixed(2);
+        let averageSpeedInKbps =(totalKbSpeed / numTests).toFixed(2);
+        let averageSpeedInMbps =(totalMbSpeed / numTests).toFixed(2);
+
+        // Display average speeds
+        bitSpeed.innerHTML += `${averageSpeedInBps}`;
+        kbSpeed.innerHTML += `${averageSpeedInKbps}`;
+        mbSpeed.innerHTML += `${averageSpeedInMbps}`;
+        info.innerHTML = "Test Completed!";
+    }else{
+        // Run the next loop
+        startTime = new Date().getTime();
+        image.src = imageApi;
+    }
+}
+
+// Initial function to start test
+const init = async () => {
+    info.innerHTML = "Testing......"
+    startTime = new Date().getTime();
+    image.src = imageApi;
+};
+
+// Run test when windows loads
+
+window.onload = () => {
+    for (let i = 0; i < numTests; i++) {
+        init();
+    }
+};
