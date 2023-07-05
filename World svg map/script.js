@@ -17,7 +17,7 @@ document.querySelectorAll(".allPaths").forEach(e => {
             document.getElementById("name").style.left = x+10 + 'px'
         }
 
-        e.style.fill = "pink"
+        e.style.fill = "lightgreen"
         document.getElementById("name").style.opacity = 1
         document.getElementById("namep").innerText = e.id
     })
