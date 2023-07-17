@@ -58,7 +58,7 @@ const Keyboard = {
                     keyElement.innerHTML = createIconHTML("backspace");
 
                     keyElement.addEventListener("click", () => {
-                        this.properties.value = this.properties.substring(0, this.properties.value.length - 1);
+                        this.properties.value = this.properties.value.substring(0, this.properties.value.length - 1);
                         this._triggerEvent("oninput");
                     });
 
@@ -72,6 +72,49 @@ const Keyboard = {
                     keyElement.addEventListener("click", () => {
                         this._toggleCapsLock();
                         keyElement.classList.toggle("keyboard__key--active", this.properties.capsLock);
+                    });
+
+                    break;
+
+            case "enter":
+                    keyElement.classList.add("keyboard__key--wide");
+                    keyElement.innerHTML = createIconHTML("keyboard_return");
+
+                    keyElement.addEventListener("click", () => {
+                        this.properties.value += "\n";
+                       this._triggerEvent("oninput");
+                    });
+
+                    break;
+
+            case "space":
+                    keyElement.classList.add("keyboard__key--extra-wide");
+                    keyElement.innerHTML = createIconHTML("space_bar");
+
+                    keyElement.addEventListener("click", () => {
+                        this.properties.value += " ";
+                       this._triggerEvent("oninput");
+                    });
+
+                    break;
+
+            case "done":
+                    keyElement.classList.add("keyboard__key--wide", "keyboard__key--dark");
+                    keyElement.innerHTML = createIconHTML("check_circle");
+
+                    keyElement.addEventListener("click", () => {
+                        this.close();
+                       this._triggerEvent("onclose");
+                    });
+
+                    break;
+
+            default:
+                    keyElement.textContent = key.toLowerCase();
+
+                    keyElement.addEventListener("click", () => {
+                        this.properties.value += this.properties.capsLock ? key.toUpperCase() : key.toLowerCase();
+                       this._triggerEvent("oninput");
                     });
 
                     break;
