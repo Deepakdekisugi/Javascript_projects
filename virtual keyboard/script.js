@@ -30,6 +30,15 @@ const Keyboard = {
         //Add to Dom
         this.elements.main.appendChild(this.elements.keysContainer);
         document.body.appendChild(this.elements.main);
+
+        //automate use of keyboard with .use-keyboard-input
+        document.querySelectorAll(".use-keyboard-input").forEach(element => {
+            element.addEventListener("focus", () => {
+                this.open(element.value, currentValue => {
+                    element.value = currentValue;
+                });
+            });
+        });
     },
 
     _createKeys() {
@@ -156,7 +165,7 @@ const Keyboard = {
     },
 
     close() {
-        this.value = "";
+        this.properties.value = "";
         this.eventHandlers.oninput = oninput;
         this.eventHandlers.onclose =onclose;
         this.elements.main.classList.add("keyboard--hidden");
@@ -165,9 +174,4 @@ const Keyboard = {
 
 window.addEventListener("DOMContentLoaded", function () {
     Keyboard.init();
-    Keyboard.open("decode", function(currentValue) {
-        console.log(currentValue);
-    }, function(currentValue) {
-        console.log("keyboard closed! Finishing value: " + currentValue);
-    });
 });
