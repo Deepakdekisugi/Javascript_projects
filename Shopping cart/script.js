@@ -57,6 +57,7 @@ class UI {
         </article>
          `;
     });
+    productsDOM.innerHTML = result;
   }
 }
 
