@@ -3,7 +3,7 @@
     {
       "sys": { "id": "1" },
       "fields": {
-        "title": "queen panel bed",
+        "title": "Queen Bed",
         "price": 10.99,
         "image": { "fields": { "file": { "url": "./images/product-1.jpeg" } } }
       }
