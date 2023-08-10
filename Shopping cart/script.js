@@ -135,12 +135,17 @@ class UI {
     cartDOM.classList.remove("showCart");
   }
   cartLogic() {
+    // clear cart buttom
     clearCartBtn.addEventListener("click", () => {
       this.clearCart();
     });
   }
   clearCart() {
-    console.log(this);
+    let cartItems = cart.map((item) => item.id);
+    cartItems.forEach((id) => this.removeItem(id));
+  }
+  removeItem(id) {
+    cart = cart.filter((item) => item.id !== id);
   }
 }
 
