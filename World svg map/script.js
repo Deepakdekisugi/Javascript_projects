@@ -22,6 +22,8 @@ document.querySelectorAll(".allPaths").forEach(e => {
         document.getElementById("namep").innerText = e.id
     })
 
+    // this is a comment 
+
     e.addEventListener("mouseleave", function(){
             e.style.fill = "#ececec"
             document.getElementById("name").style.opacity = 0
