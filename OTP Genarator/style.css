@@ -31,7 +31,7 @@ body{
 .row input{
     height: 50px;
     width: 50px;
-    padding: 25px;
+    padding: 5px;
     font-size: 25px;
     text-align: center;
     border-radius: 10px;
@@ -43,4 +43,20 @@ input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button{
     -webkit-appearance: none;
     margin: 0px;
+}
+
+button{
+    width: 50%;
+    height: 45px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #78c1f3;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+button:hover{
+    background: #3998d8;
 }
