@@ -60,3 +60,7 @@ button{
 button:hover{
     background: #3998d8;
 }
+
+.active{
+    background: #0099ff;
+}
