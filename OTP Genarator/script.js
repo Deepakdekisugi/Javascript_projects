@@ -3,10 +3,11 @@ const inputs = document.querySelectorAll("input"),
     mobile = document.getElementById("mobile"),
     expire = document.getElementById("expire");
 
-generateOTPs();
+    let OTP = "", expireInterval = "";
+
 
 function generateOTPs(){
-    console.log(
+    OTP (
         Math.floor(Math.random() * 10)+
         "" +
         Math.floor(Math.random() * 10)+
@@ -16,17 +17,28 @@ function generateOTPs(){
         Math.floor(Math.random() * 10)
     );
     
+    alert("Your OTP is: " +OTP);
+    
     inputs[0].focus();
     expire.innerText = 30;
-    const expireInterval = setInterval(function (){
+    expireInterval = setInterval(function (){
         expire.innerText--;
         if(expire.innerText == 0){
-            clearInterval(expireInterval)
+            clearInterval(expireInterval);
         };
     }, 1000);
 }
 
-function clearOTPs(){}
+function clearOTPs(){
+    inputs.forEach((input) => {
+        input.value = "";
+        input.setAttribute("disabled", true);
+    });
+    clearInterval(expireInterval);
+    expire.innerText = 0;
+    button.setAttribute("disabled", true);
+    button.classList.remove("active");
+}
 
 inputs.forEach((input, index) => {
     input.addEventListener("keyup", function(e){
@@ -66,5 +78,19 @@ window.addEventListener("load", () =>{
     let x = prompt("Please enter your mobile number to verify ");
     if(x){
         mobile.innerText = x;
+        generateOTPs();
+    }
+})
+
+button.addEventListener("click", ()=> {
+    let verify = "";
+    inputs.forEach((input) => {
+        verify += input.value;
+        clearOTPs();
+    });
+    if(verify === OTP){
+        alert("your account has been verified successfully");
+    }else{
+        alert("your varification Faild");
     }
 })
