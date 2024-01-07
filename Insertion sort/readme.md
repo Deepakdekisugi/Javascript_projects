@@ -10,7 +10,7 @@ This project is a simple web-based visualizer for the Insertion Sort algorithm. 
 
 ## Demo
 
-[Live Demo](#) - Add a link to the live demo if available.
+[Live Demo](#) 
 
 ## Screenshots
 
