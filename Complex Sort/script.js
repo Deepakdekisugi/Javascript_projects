@@ -27,6 +27,10 @@ function init() {
     }
   }
 
+  function play() {
+    moves = bubbleSort(array);
+  }
+
   function bubbleSort(array) {
     const moves = [];
     do {
