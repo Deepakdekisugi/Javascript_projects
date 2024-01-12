@@ -53,7 +53,41 @@ function init() {
     moves = bubbleSort(array);
   }
 
-  
+  const bubbleSortButton = document.getElementById("bubbleSortButton");
+const heapSortButton = document.getElementById("heapSortButton");
+
+bubbleSortButton.addEventListener("click", () => {
+  moves = bubbleSort(array.slice());
+  animate();
+});
+
+heapSortButton.addEventListener("click", () => {
+  moves = heapSort(array.slice());
+  animate();
+});
+const cycleSortButton = document.getElementById("cycleSortButton");
+cycleSortButton.addEventListener("click", triggerCycleSort);
+
+const selectionSortButton = document.getElementById("selectionSortButton");
+selectionSortButton.addEventListener("click", triggerSelectionSort);
+
+const combSortButton = document.getElementById("combSortButton");
+combSortButton.addEventListener("click", triggerCombSort);
+
+const stoogeSortButton = document.getElementById("stoogeSortButton");
+stoogeSortButton.addEventListener("click", triggerStoogeSort);
+
+const gnomeSortButton = document.getElementById("gnomeSortButton");
+gnomeSortButton.addEventListener("click", triggerGnomeSort);
+
+const cocktailShakerSortButton = document.getElementById("cocktailShakerSortButton");
+cocktailShakerSortButton.addEventListener("click", triggerCocktailShakerSort);
+
+const introsortButton = document.getElementById("introsortButton");
+introsortButton.addEventListener("click", triggerIntrosort);
+
+const oddEvenSortButton = document.getElementById("oddEvenSortButton");
+oddEvenSortButton.addEventListener("click", triggerOddEvenSort);
 
   animate();
 
