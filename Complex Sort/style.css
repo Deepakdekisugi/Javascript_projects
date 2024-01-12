@@ -2,9 +2,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    position: relative;
 }
 /* style.css */
 
@@ -111,6 +108,7 @@ body{
 h1 {
     font-size: 2em;
     margin-bottom: 20px;
+    color: azure;
     z-index: 4;
     position: relative;
 }
@@ -119,7 +117,6 @@ canvas {
     border: 2px solid #fff;
     margin: 20px 0;
     z-index: 4;
-    position: relative;
 }
 
 button {
@@ -135,7 +132,6 @@ button {
     cursor: pointer;
     border-radius: 5px;
     z-index: 4;
-    position: relative;
 }
 
 button:hover {
@@ -152,7 +148,6 @@ hr {
 div {
     margin-bottom: 15px;
     z-index: 4;
-    position: relative;
 }
 
 /* Add more styles as needed */
