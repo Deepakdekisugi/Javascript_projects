@@ -48,11 +48,13 @@ function init() {
       cols[i] = new Column(x, y, width, height);
     }
   }
-
+  
   function play() {
     moves = bubbleSort(array);
   }
 
+  animate();
+  
   function bubbleSort(array) {
     const moves = [];
     do {
@@ -69,6 +71,7 @@ function init() {
     } while (swapped);
     return moves;
   }
+
 
   function animate() {
     ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
