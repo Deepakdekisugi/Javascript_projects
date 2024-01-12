@@ -2,4 +2,157 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
 }
+/* style.css */
+
+
+
+@keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  @-webkit-keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  @-moz-keyframes move-background {    
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+      @-webkit-keyframes move-background {
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  .background-container{
+      position: fixed;
+      top: 0;
+      left:0;
+      bottom: 0;
+      right: 0;
+  }
+  
+  .stars {
+   background: black url("stars.png") repeat;
+   position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+        z-index: 1;
+  }
+  
+  .twinkling{
+      width:10000px;
+      height: 100%;
+      background: transparent url("twinkling.png") repeat;
+      background-size: 1000px 1000px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      
+      -moz-animation:move-background 70s linear infinite;
+    -ms-animation:move-background 70s linear infinite;
+    -o-animation:move-background 70s linear infinite;
+    -webkit-animation:move-background 70s linear infinite;
+    animation:move-background 70s linear infinite;
+      
+  }
+  
+  .clouds{
+      width:10000px;
+      height: 100%;
+      background: transparent url("clouds_repeat.png") repeat;
+      background-size: 1000px 1000px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 3;
+  
+     -moz-animation:move-background 150s linear infinite;
+    -ms-animation:move-background 150s linear infinite;
+    -o-animation:move-background 150s linear infinite;
+    -webkit-animation:move-background 150s linear infinite;
+    animation:move-background 150s linear infinite;
+  }
+  img{
+    height: 70vh;
+    width:70vh;
+    position: absolute;
+    z-index: 3;
+    right: 20px;
+  }
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    z-index: 4;
+    position: relative;
+}
+
+canvas {
+    border: 2px solid #fff;
+    margin: 20px 0;
+    z-index: 4;
+    position: relative;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 4;
+    position: relative;
+}
+
+button:hover {
+    background-color: #45a049;
+    z-index: 4;
+}
+
+hr {
+    border: 1px solid #fff;
+    margin: 20px 0;
+    z-index: 4;
+}
+
+div {
+    margin-bottom: 15px;
+    z-index: 4;
+    position: relative;
+}
+
+/* Add more styles as needed */

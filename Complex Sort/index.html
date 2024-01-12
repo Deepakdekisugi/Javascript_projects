@@ -3,33 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" />
     <link rel="stylesheet" href="style.css">
+    <img src="anime.png" class="anime__animated anime__fadeIn" />
+
     <title>Complex Sorting Visualizer</title>
 </head>
 <body>
 
-    <h1>Complex Sorting Visualizer</h1>
-    <canvas id="myCanvas"></canvas>
+    <div class="background-container">
+        <img src="moon2.png" alt="">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+    
 
-    <hr>
 
-    <div>
-        <button onClick="init()">init</button>
-        <button id="bubbleSortButton">Bubble Sort</button>
-        <button id="heapSortButton">Heap Sort</button>
-        <button id="cycleSortButton">Cycle Sort</button>
-        <button id="selectionSortButton">Selection Sort</button>
-    </div>
-    <div>
-        <button id="combSortButton">Comb Sort</button>
-        <button id="stoogeSortButton">Stooge Sort</button>
-        <button id="gnomeSortButton">Gnome Sort</button>
-        <button id="cocktailShakerSortButton">CockTailShaker Sort</button>
-    </div>
-    <div>
-        <button id="introsortButton">Intro Sort</button>
-        <button id="oddEvenSortButton">Odd Even Sort</button>
+        <h1>Complex Sorting Visualizer</h1>
+        <canvas id="myCanvas"></canvas>
 
+        <hr>
+
+        <div>
+            <button onClick="init()">init</button>
+            <button id="bubbleSortButton">Bubble Sort</button>
+            <button id="heapSortButton">Heap Sort</button>
+            <button id="cycleSortButton">Cycle Sort</button>
+            <button id="selectionSortButton">Selection Sort</button>
+        </div>
+        <div>
+            <button id="combSortButton">Comb Sort</button>
+            <button id="stoogeSortButton">Stooge Sort</button>
+            <button id="gnomeSortButton">Gnome Sort</button>
+            <button id="cocktailShakerSortButton">CockTailShaker Sort</button>
+        </div>
+        <div>
+            <button id="introsortButton">Intro Sort</button>
+            <button id="oddEvenSortButton">Odd Even Sort</button>
+
+        </div>
     </div>
 
     <script src="math.js"></script>
