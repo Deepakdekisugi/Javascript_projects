@@ -13,6 +13,7 @@ body{
     background: #24C6DC; 
     background: -webkit-linear-gradient(to bottom, #514A9D, #24C6DC);  
     background: linear-gradient(to bottom, #514A9D, #24C6DC); 
+    z-index: 0;
   }
   
   .box div {
@@ -100,12 +101,13 @@ h1 {
     margin-bottom: 20px;
     color: rgb(16, 163, 158);
     position: relative;
+    z-index: 1;
 }
 
 canvas {
     border: 2px solid #17092b;
     margin: 20px 0;
-    align-items: center;
+    z-index: 1;
 }
 
 button {
@@ -121,7 +123,8 @@ button {
     cursor: pointer;
     border-radius: 5px;
     font-family: cursive;
-    transition: transform 0.3s ease-in-out
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
 }
 
 button:hover {
@@ -133,8 +136,10 @@ button:hover {
 hr {
     border: 1px solid #fff;
     margin: 20px 0;
+    z-index: 1;
 }
 
 div {
     margin-bottom: 15px;
+    z-index: 1;
 }
