@@ -105,14 +105,14 @@ h1 {
 }
 
 canvas {
-    border: 2px solid #17092b;
+    border: 2px solid #02449b;
     margin: 20px 0;
     z-index: 1;
 }
 
 button {
-    background-color: #4CAF50;
-    color: #e80b0b;
+    background-color: #0a81cb;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -128,8 +128,8 @@ button {
 }
 
 button:hover {
-    background-color: #cf1812;
-    color: rgb(10, 202, 39);
+    background-color: #12cf74;
+    color: rgb(10, 167, 202);
     transform: scale(1.2);
 }
 
