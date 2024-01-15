@@ -41,7 +41,7 @@ class Column{
     
     
     
-    jump(frameCount = 40) {
+    jump(frameCount = 60) {
         for (let i = 1; i <= frameCount; i++) {
             const t = i / frameCount;
             const u = Math.sin(t * Math.PI);
