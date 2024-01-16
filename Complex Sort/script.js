@@ -48,6 +48,30 @@ function init() {
   }
 }
 
+
+function updateAlgorithmInfo(algorithmName) {
+  const infoDiv = document.getElementById("algorithmInfo");
+  let algorithmInfo = "";
+
+  switch (algorithmName) {
+    case "bubbleSort":
+      algorithmInfo = "Bubble Sort: This is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.";
+      break;
+    case "heapSort":
+      algorithmInfo = "Heap Sort: Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure to build a max-heap and perform the sorting.";
+      break;
+    // Add cases for other sorting algorithms
+
+    default:
+      algorithmInfo = "No information available for this algorithm.";
+      break;
+  }
+
+  infoDiv.innerText = algorithmInfo;
+}
+
+
+
 function play() {
   moves = bubbleSort(array);
 }
@@ -57,11 +81,13 @@ const heapSortButton = document.getElementById("heapSortButton");
 
 bubbleSortButton.addEventListener("click", () => {
   moves = bubbleSort(array.slice());
+  updateAlgorithmInfo("bubbleSort");
   animate();
 });
 
 heapSortButton.addEventListener("click", () => {
   moves = heapSort(array.slice());
+  updateAlgorithmInfo("heapSort");
   animate();
 });
 const cycleSortButton = document.getElementById("cycleSortButton");
