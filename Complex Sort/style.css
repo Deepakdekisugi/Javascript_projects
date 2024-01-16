@@ -7,6 +7,21 @@ body{
     font-family: 'Press Start 2P', cursive;
 }
 
+
+#algorithmInfo{
+  background:transparent;
+  width: 100%;
+  text-align: center;
+  padding: 10px 20px;
+  color: #0a28ea;
+}
+#algorithmInfo:hover{
+  transform: scale(1.6);
+  width: 60%;
+  border: 2px solid #02449b;
+}
+
+
 .wrapper {
     position: absolute;
     width: 100%;
@@ -135,13 +150,8 @@ button:hover {
     transform: scale(1.2);
 }
 
-hr {
-    border: 1px solid #fff;
-    margin: 20px 0;
-    z-index: 1;
-}
-
 div {
+  margin-top: 10px;
     margin-bottom: 15px;
     z-index: 1;
 }
