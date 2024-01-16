@@ -60,6 +60,30 @@ function updateAlgorithmInfo(algorithmName) {
     case "heapSort":
       algorithmInfo = "Heap Sort: Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure to build a max-heap and perform the sorting.";
       break;
+    case "cycleSort":
+      algorithmInfo = "Cycle Sort: Cycle sort is an in-place, unstable sorting algorithm that is optimal in terms of the total number of writes to the original array.";
+      break;
+    case "selectionSort":
+      algorithmInfo = "Selection Sort: Selection sort is a simple comparison-based sorting algorithm that divides the input into a sorted and an unsorted region.";
+      break;
+    case "combSort":
+      algorithmInfo = "Comb Sort: Comb sort is a relatively simple comparison-based sorting algorithm that improves on bubble sort by using a gap sequence to eliminate turtles.";
+      break;
+    case "stoogeSort":
+      algorithmInfo = "Stooge Sort: Stooge sort is a recursive sorting algorithm that sorts the first two-thirds and last two-thirds of an array, then sorts the first two-thirds again.";
+      break;
+    case "gnomeSort":
+      algorithmInfo = "Gnome Sort: Gnome sort is a simple sorting algorithm that works by repeatedly swapping adjacent elements if they are in the wrong order.";
+      break;
+    case "cocktailShakerSort":
+      algorithmInfo = "Cocktail Shaker Sort: Cocktail shaker sort is a variation of the bubble sort algorithm that sorts the list in both directions, repeatedly.";
+      break;
+    case "introsort":
+      algorithmInfo = "Introsort: Introsort is a hybrid sorting algorithm that provides both fast average time complexity and (asymptotically) optimal worst-case time complexity.";
+      break;
+    case "oddEvenSort":
+      algorithmInfo = "Odd-Even Sort: Odd-even sort, or brick sort, is a parallel version of bubble sort where the list is divided into odd and even elements, and the two sublists are sorted independently.";
+      break;
     // Add cases for other sorting algorithms
 
     default:
@@ -146,6 +170,7 @@ function oddEvenSort(array, moves) {
 function triggerOddEvenSort() {
     moves = [];
     oddEvenSort(array.slice(), moves);
+    updateAlgorithmInfo("oddEvenSort");
     animate();
 }
 
@@ -233,6 +258,7 @@ function heapify(array, low, high, i, moves) {
 function triggerIntrosort() {
     moves = [];
     introsort(array.slice(), moves);
+    updateAlgorithmInfo("introsort");
     animate();
 }
 
@@ -282,6 +308,7 @@ function cocktailShakerSort(array, moves) {
 function triggerCocktailShakerSort() {
     moves = [];
     cocktailShakerSort(array.slice(), moves);
+    updateAlgorithmInfo("cocktailShakerSort");
     animate();
 }
 
@@ -307,6 +334,7 @@ function gnomeSort(array, moves) {
 function triggerGnomeSort() {
     moves = [];
     gnomeSort(array.slice(), moves);
+    updateAlgorithmInfo("gnomeSort");
     animate();
 }
 
@@ -331,6 +359,7 @@ function stoogeSort(array, start, end, moves) {
 function triggerStoogeSort() {
     moves = [];
     stoogeSort(array.slice(), 0, array.length - 1, moves);
+    updateAlgorithmInfo("stoogeSort");
     animate();
 }
 
@@ -373,6 +402,7 @@ function combSort(array) {
 
 function triggerCombSort() {
     moves = combSort(array.slice());
+    updateAlgorithmInfo("combSort");
     animate();
 }
 
@@ -403,6 +433,7 @@ function selectionSort(array) {
 
 function triggerSelectionSort() {
     moves = selectionSort(array.slice());
+    updateAlgorithmInfo("selectionSort");
     animate();
 }
 
@@ -453,6 +484,7 @@ function cycleSort(array) {
 
 function triggerCycleSort() {
   moves = cycleSort(array.slice());
+  updateAlgorithmInfo("cycleSort");
   animate();
 }
 
