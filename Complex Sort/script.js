@@ -256,6 +256,7 @@ function heapify(array, low, high, i, moves) {
 }
 
 function triggerIntrosort() {
+    init();
     moves = [];
     introsort(array.slice(), moves);
     updateAlgorithmInfo("introsort");
