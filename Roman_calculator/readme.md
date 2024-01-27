@@ -1,4 +1,4 @@
-# Roman to Numerical and Vice Versa Calculator
+# Roman to Numerical Calculator
 
 This simple web application allows users to convert between Roman numerals and Arabic numerals (decimal numbers). The calculator is implemented using HTML, CSS, and JavaScript.
 
@@ -40,4 +40,4 @@ Feel free to use, modify, and enhance this calculator as needed. If you have any
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md] file for details.
