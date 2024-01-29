@@ -107,14 +107,12 @@ bubbleSortButton.addEventListener("click", () => {
   moves = bubbleSort(array.slice());
   updateAlgorithmInfo("bubbleSort");
   animate();
-  init();
 });
 
 heapSortButton.addEventListener("click", () => {
   moves = heapSort(array.slice());
   updateAlgorithmInfo("heapSort");
   animate();
-  init();
 });
 const cycleSortButton = document.getElementById("cycleSortButton");
 cycleSortButton.addEventListener("click", triggerCycleSort);
@@ -174,7 +172,6 @@ function triggerOddEvenSort() {
     oddEvenSort(array.slice(), moves);
     updateAlgorithmInfo("oddEvenSort");
     animate();
-    init()
 }
 
 
@@ -220,7 +217,6 @@ function partition(array, low, high, moves) {
     }
 }
 
-// This is heap sort 
 function heapsort(array, low, high, moves) {
     buildHeap(array, low, high, moves);
     for (let i = high; i > low; i--) {
@@ -265,7 +261,6 @@ function triggerIntrosort() {
     introsort(array.slice(), moves);
     updateAlgorithmInfo("introsort");
     animate();
-    init();
 }
 
 
@@ -316,7 +311,6 @@ function triggerCocktailShakerSort() {
     cocktailShakerSort(array.slice(), moves);
     updateAlgorithmInfo("cocktailShakerSort");
     animate();
-    init();
 }
 
 
@@ -343,7 +337,6 @@ function triggerGnomeSort() {
     gnomeSort(array.slice(), moves);
     updateAlgorithmInfo("gnomeSort");
     animate();
-    init();
 }
 
 // This is Smooth sort 
@@ -369,7 +362,6 @@ function triggerStoogeSort() {
     stoogeSort(array.slice(), 0, array.length - 1, moves);
     updateAlgorithmInfo("stoogeSort");
     animate();
-    init();
 }
 
 
@@ -413,7 +405,6 @@ function triggerCombSort() {
     moves = combSort(array.slice());
     updateAlgorithmInfo("combSort");
     animate();
-    init();
 }
 
 
@@ -445,7 +436,6 @@ function triggerSelectionSort() {
     moves = selectionSort(array.slice());
     updateAlgorithmInfo("selectionSort");
     animate();
-    init();
 }
 
 // this is Cycle sort
@@ -497,7 +487,6 @@ function triggerCycleSort() {
   moves = cycleSort(array.slice());
   updateAlgorithmInfo("cycleSort");
   animate();
-  init();
 }
 
 // this is heap sort
