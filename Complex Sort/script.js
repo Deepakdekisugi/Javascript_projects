@@ -218,6 +218,7 @@ function partition(array, low, high, moves) {
     }
 }
 
+// This is heap sort 
 function heapsort(array, low, high, moves) {
     buildHeap(array, low, high, moves);
     for (let i = high; i > low; i--) {
@@ -262,6 +263,7 @@ function triggerIntrosort() {
     introsort(array.slice(), moves);
     updateAlgorithmInfo("introsort");
     animate();
+    init()
 }
 
 
