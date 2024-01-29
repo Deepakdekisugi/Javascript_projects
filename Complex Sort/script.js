@@ -107,12 +107,14 @@ bubbleSortButton.addEventListener("click", () => {
   moves = bubbleSort(array.slice());
   updateAlgorithmInfo("bubbleSort");
   animate();
+  init();
 });
 
 heapSortButton.addEventListener("click", () => {
   moves = heapSort(array.slice());
   updateAlgorithmInfo("heapSort");
   animate();
+  init();
 });
 const cycleSortButton = document.getElementById("cycleSortButton");
 cycleSortButton.addEventListener("click", triggerCycleSort);
@@ -367,6 +369,7 @@ function triggerStoogeSort() {
     stoogeSort(array.slice(), 0, array.length - 1, moves);
     updateAlgorithmInfo("stoogeSort");
     animate();
+    init();
 }
 
 
@@ -410,6 +413,7 @@ function triggerCombSort() {
     moves = combSort(array.slice());
     updateAlgorithmInfo("combSort");
     animate();
+    init();
 }
 
 
@@ -441,6 +445,7 @@ function triggerSelectionSort() {
     moves = selectionSort(array.slice());
     updateAlgorithmInfo("selectionSort");
     animate();
+    init();
 }
 
 // this is Cycle sort
@@ -492,6 +497,7 @@ function triggerCycleSort() {
   moves = cycleSort(array.slice());
   updateAlgorithmInfo("cycleSort");
   animate();
+  init();
 }
 
 // this is heap sort
