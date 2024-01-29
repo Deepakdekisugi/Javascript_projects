@@ -172,6 +172,7 @@ function triggerOddEvenSort() {
     oddEvenSort(array.slice(), moves);
     updateAlgorithmInfo("oddEvenSort");
     animate();
+    init()
 }
 
 
