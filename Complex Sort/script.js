@@ -263,7 +263,7 @@ function triggerIntrosort() {
     introsort(array.slice(), moves);
     updateAlgorithmInfo("introsort");
     animate();
-    init()
+    init();
 }
 
 
@@ -314,6 +314,7 @@ function triggerCocktailShakerSort() {
     cocktailShakerSort(array.slice(), moves);
     updateAlgorithmInfo("cocktailShakerSort");
     animate();
+    init();
 }
 
 
@@ -340,6 +341,7 @@ function triggerGnomeSort() {
     gnomeSort(array.slice(), moves);
     updateAlgorithmInfo("gnomeSort");
     animate();
+    init();
 }
 
 // This is Smooth sort 
