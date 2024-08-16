@@ -6,6 +6,63 @@
     <title>Color Changing Flag</title>
 </head>
 <body>
-    
+    <canvas id="myCanvas"></canvas>
+      <button onClick="colorChangeEffect()">Color Change Effect</button>
+      <script>
+         myCanvas.width=window.innerWidth;
+         myCanvas.height=window.innerHeight;
+         const ctx=myCanvas.getContext("2d");
+
+         const G={x:0,y:0.05};
+         const maxWindStrength=0.04;
+         const W={x:maxWindStrength,y:0};
+         const flag=new Flag({});
+
+         let isDragging=false;
+         
+         let selectedParticle=null;
+
+         myCanvas.onmousedown=function(evt){
+            isDragging=true;
+            selectedParticle=flag.getNearestParticle(evt);
+            selectedParticle.fixed=true;
+         }
+         myCanvas.onmousemove=function(evt){
+            if(isDragging){
+               selectedParticle.loc.x=evt.x;
+               selectedParticle.loc.y=evt.y;
+            }
+         }
+         myCanvas.onmouseup=function(evt){
+            isDragging=false;
+         }
+
+         animate();
+
+         setInterval(function(){
+            W.x=lerp(
+               -maxWindStrength,
+               maxWindStrength,
+               Math.random()
+            );
+         },1000);
+
+         function animate(){
+            ctx.clearRect(0,0,
+               myCanvas.width,myCanvas.height);
+            flag.update();
+            flag.draw(ctx);
+            requestAnimationFrame(animate);
+         }
+
+         function colorChangeEffect(){
+            for(const patch of flag.patches){
+               setTimeout(function(){
+                  patch.selColor=
+                     patch.selColor=="fi"?"ro":"fi";
+               },Math.random()*2000);
+            }
+         }
+      </script>
 </body>
 </html>
